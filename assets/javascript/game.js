@@ -7,10 +7,10 @@ $("#win-point").text(numWin);
 $("#lose-point").text(numLose);
 
 
-let gem1Value = Math.floor(Math.random() * 10)+1;
-let gem2Value = Math.floor(Math.random() * 10)+1;
-let gem3Value = Math.floor(Math.random() * 10)+1;
-let gem4Value = Math.floor(Math.random() * 10)+1;
+let gem1Value = Math.ceil(Math.random() * 12);
+let gem2Value = Math.ceil(Math.random() * 12);
+let gem3Value = Math.ceil(Math.random() * 12);
+let gem4Value = Math.ceil(Math.random() * 12);
 
 function calculateGameScore() {
 	let gameScore = 0;
@@ -43,12 +43,13 @@ function resetGame() {
 }
 
 function win() {
-	
-
+    numWin++;
+    $("#win-point").text(numWin);
 }
 
 function lose() {
-	
+    numLose++;
+    $("#lose-point").text(numLose);
 }
 
 $( ".gem-button" ).click(function(e) {
