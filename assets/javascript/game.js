@@ -29,10 +29,17 @@ let gameScore = calculateGameScore();
 $("#game-score").text(gameScore);
 
 function resetGame() {
-	numWin = 0;
-	numLose = 0; 
-	myScore = 0;
-
+	calculateGameScore();
+	myScore = 0; 
+	$("#game-score").text(gameScore);
+	$("#my-score").text(myScore);
+	$("#1").attr("data-crystalvalue", gem1Value);
+	$("#2").attr("data-crystalvalue", gem2Value);
+	$("#3").attr("data-crystalvalue", gem3Value);
+	$("#4").attr("data-crystalvalue", gem4Value);
+	$("#win-point").text(numWin);
+	$("#lose-point").text(numLose);
+	
 }
 
 function win() {
@@ -57,8 +64,8 @@ $( ".gem-button" ).click(function(e) {
 	$("#my-score").text(myScore);
 });
 
-$( ".reset-game" ).click(function(resetGame) {
-	reset();
+$( ".reset-game" ).click(function() {
+	resetGame();
 });
 
 
