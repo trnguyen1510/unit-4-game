@@ -1,1 +1,55 @@
 
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Crystals Collector</title>
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	</head>
+	<body>
+		<div class="jumbotron">
+			<h4>Expected:</h4>
+			<h2 id="game-score"></h2>
+		</div>
+		<div class="jumbotron">
+			<h4>Current score:</h4>
+			<h2 id="my-score"></h2>
+		</div>
+		<div class="ml-3">
+			<button type="button" class="btn btn-default gem-button" id="1">
+			  <img src="./assets/images/gem1.png">
+			</button>
+			<button type="button" class="btn btn-default gem-button" id="2">
+			  <img src="./assets/images/gem2.png">
+			</button>
+			<button type="button" class="btn btn-default gem-button" id="3">
+			  <img src="./assets/images/gem3.png">
+			</button>
+			<button type="button" class="btn btn-default gem-button" id="4">
+			  <img src="./assets/images/gem4.png">
+			</button>
+		</div>
+		<div class="ml-3">
+			<div style="display: flex">
+				<h4>Win:</h4>
+				<h2 className="ml-4" id="win-point"></h2>
+			</div>
+			<div style="display: flex">
+				<h4>Lose:</h4>
+				<h2 className="ml-4" id="lose-point"></h2>
+			</div>
+		</div>
+		<div class="ml-3">
+			<button type="button" class="btn btn-primary reset-game">
+			  Reset game
+			</button>
+		</div>
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.slim.js"
+		  integrity="sha256-fNXJFIlca05BIO2Y5zh1xrShK3ME+/lYZ0j+ChxX2DA="
+		  crossorigin="anonymous"></script>
+	  	<script type="text/javascript" src="./assets/javascript/game.js"></script>	
+	</body>
+</html>
